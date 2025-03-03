@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\asus\\Desktop\\OBD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E56B1E4-47FA-4450-8AA4-D154A262A4CC}|OBD.Infrastructure\\OBD.Infrastructure.csproj|c:\\users\\asus\\desktop\\obd\\obd.infrastructure\\persistence\\obddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E56B1E4-47FA-4450-8AA4-D154A262A4CC}|OBD.Infrastructure\\OBD.Infrastructure.csproj|solutionrelative:obd.infrastructure\\persistence\\obddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|c:\\users\\asus\\desktop\\obd\\obd.api\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|solutionrelative:obd.api\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{398FDD0F-3ACB-482E-835D-14BECCFCF996}|OBD.Domain\\OBD.Domain.csproj|c:\\users\\asus\\desktop\\obd\\obd.domain\\entities\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{398FDD0F-3ACB-482E-835D-14BECCFCF996}|OBD.Domain\\OBD.Domain.csproj|solutionrelative:obd.domain\\entities\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{398FDD0F-3ACB-482E-835D-14BECCFCF996}|OBD.Domain\\OBD.Domain.csproj|c:\\users\\asus\\desktop\\obd\\obd.domain\\entities\\passwordreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{398FDD0F-3ACB-482E-835D-14BECCFCF996}|OBD.Domain\\OBD.Domain.csproj|solutionrelative:obd.domain\\entities\\passwordreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{398FDD0F-3ACB-482E-835D-14BECCFCF996}|OBD.Domain\\OBD.Domain.csproj|c:\\users\\asus\\desktop\\obd\\obd.domain\\entities\\allcars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{398FDD0F-3ACB-482E-835D-14BECCFCF996}|OBD.Domain\\OBD.Domain.csproj|solutionrelative:obd.domain\\entities\\allcars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|c:\\users\\asus\\desktop\\obd\\obd.api\\controllers\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|solutionrelative:obd.api\\controllers\\geminiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|c:\\users\\asus\\desktop\\obd\\obd.api\\controllers\\allcarscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|solutionrelative:obd.api\\controllers\\allcarscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__Local/test1/True/SqlTable/dbo.Cars.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|c:\\users\\asus\\desktop\\obd\\obd.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|solutionrelative:obd.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|c:\\users\\asus\\desktop\\obd\\obd.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC561959-4652-4236-A7EC-FD537720C7B1}|OBD.API\\OBD.API.csproj|solutionrelative:obd.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__Local/test1/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__Local/test1/True/SqlTable/dbo.OBD2.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ObdDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Infrastructure\\Persistence\\ObdDbContext.cs",
+              "RelativeDocumentMoniker": "OBD.Infrastructure\\Persistence\\ObdDbContext.cs",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Infrastructure\\Persistence\\ObdDbContext.cs",
+              "RelativeToolTip": "OBD.Infrastructure\\Persistence\\ObdDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:39:51.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cars.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\Entities\\Cars.cs",
+              "RelativeDocumentMoniker": "OBD.Domain\\Entities\\Cars.cs",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\Entities\\Cars.cs",
+              "RelativeToolTip": "OBD.Domain\\Entities\\Cars.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:39:12.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AllCars.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\Entities\\AllCars.cs",
+              "RelativeDocumentMoniker": "OBD.Domain\\Entities\\AllCars.cs",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\Entities\\AllCars.cs",
+              "RelativeToolTip": "OBD.Domain\\Entities\\AllCars.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:36:29.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PasswordReset.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\Entities\\PasswordReset.cs",
+              "RelativeDocumentMoniker": "OBD.Domain\\Entities\\PasswordReset.cs",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\Entities\\PasswordReset.cs",
+              "RelativeToolTip": "OBD.Domain\\Entities\\PasswordReset.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T15:35:57.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\appsettings.json",
+              "RelativeDocumentMoniker": "OBD.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\appsettings.json",
+              "RelativeToolTip": "OBD.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-03T13:07:36.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\Program.cs",
+              "RelativeDocumentMoniker": "OBD.API\\Program.cs",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\Program.cs",
+              "RelativeToolTip": "OBD.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T13:06:58.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GeminiService.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\Controllers\\GeminiService.cs",
+              "RelativeDocumentMoniker": "OBD.API\\Controllers\\GeminiService.cs",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\Controllers\\GeminiService.cs",
+              "RelativeToolTip": "OBD.API\\Controllers\\GeminiService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T13:01:13.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AllCarsController.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\Controllers\\AllCarsController.cs",
+              "RelativeDocumentMoniker": "OBD.API\\Controllers\\AllCarsController.cs",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\Controllers\\AllCarsController.cs",
+              "RelativeToolTip": "OBD.API\\Controllers\\AllCarsController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T10:58:20.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "dbo.OBD2 [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__Local/test1/True/SqlTable/dbo.OBD2.sql",
+              "ToolTip": "dbo.OBD2 [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-03T10:56:28.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.Cars [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__Local/test1/True/SqlTable/dbo.Cars.sql",
+              "ToolTip": "dbo.Cars [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-03T10:53:07.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__Local/test1/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-03T10:53:05.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CarController.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\Controllers\\CarController.cs",
+              "RelativeDocumentMoniker": "OBD.API\\Controllers\\CarController.cs",
+              "ToolTip": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\Controllers\\CarController.cs",
+              "RelativeToolTip": "OBD.API\\Controllers\\CarController.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAASwKEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T10:43:45.83Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

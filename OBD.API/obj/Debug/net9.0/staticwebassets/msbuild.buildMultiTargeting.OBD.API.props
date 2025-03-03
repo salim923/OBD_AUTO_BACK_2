@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\OBD.API.props" />
+</Project>

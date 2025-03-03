@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Net.Mail;
 using System.Net;
+using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Authentication.Google;
 
 namespace OBD.API.Controllers
 {
@@ -47,7 +49,130 @@ namespace OBD.API.Controllers
             return Ok(new { message = "Logged out successfully" });
         }
 
+        [HttpPost]
+        [Route("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterModel model)
+        {
+            if (string.IsNullOrWhiteSpace(model.Username) ||
+                string.IsNullOrWhiteSpace(model.Email) ||
+                string.IsNullOrWhiteSpace(model.Password) ||
+                string.IsNullOrWhiteSpace(model.Phone) ||
+                string.IsNullOrWhiteSpace(model.CIN) ||
+                string.IsNullOrWhiteSpace(model.Gender) ||
+                string.IsNullOrWhiteSpace(model.Country) ||
+                string.IsNullOrWhiteSpace(model.Address))
+            {
+                return BadRequest("All required fields must be provided.");
+            }
+            if (await _context.Users.AnyAsync(u => u.CIN == model.CIN))
+                return BadRequest("CIN is already taken.");
+            if (await _context.Users.AnyAsync(u => u.Email == model.Email))
+                return BadRequest("Email is already in use.");
+            if (!Regex.IsMatch(model.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                return BadRequest("Invalid email format.");
+            if (!Regex.IsMatch(model.Password, @"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"))
+                return BadRequest("Password must be at least 6 characters long and contain both letters and numbers.");
+            if (model.Phone.Length < 8 || model.Phone.Length > 15)
+                return BadRequest("Phone number must be between 8 and 15 characters.");
+            if (model.Phone.Length < 8)
+                return BadRequest("Cin number must be 8 at least characters.");
 
+            var user = new User
+            {
+                Username = model.Username,
+                Email = model.Email,
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password),
+                Phone = model.Phone,
+                CIN = model.CIN,
+                DateOfBirth = model.DateOfBirth,
+                Gender = model.Gender,
+                Country = model.Country,
+                Address = model.Address
+            };
+
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "User registered successfully" });
+        }
+
+
+        // Google login
+        [HttpGet("google-login")]
+        public IActionResult GoogleLogin()
+        {
+            var redirectUrl = Url.Action("GoogleResponse", "Auth", null, Request.Scheme);
+            var properties = new AuthenticationProperties { RedirectUri = redirectUrl };
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+        [HttpGet("google-response")]
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var authenticateResult = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
+
+            if (!authenticateResult.Succeeded)
+                return BadRequest("Google authentication failed.");
+
+            var email = authenticateResult.Principal.FindFirst(ClaimTypes.Email)?.Value;
+            var name = authenticateResult.Principal.FindFirst(ClaimTypes.Name)?.Value;
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(name))
+                return BadRequest("Unable to retrieve user information.");
+
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (existingUser == null)
+            {
+                return BadRequest("User not found. Please sign up first.");
+            }
+
+            var token = GenerateJwtToken(existingUser);
+            var redirectUrl = $"http://localhost:4200/auth-redirect?token={token}";
+            return Redirect(redirectUrl);
+        }
+
+        // Sign up with Google
+        [HttpGet("signup-google")]
+        public IActionResult SignUpGoogleLogin()
+        {
+            var redirectUrl = Url.Action("SignUpGoogleResponse", "Auth", null, Request.Scheme);
+            var properties = new AuthenticationProperties { RedirectUri = redirectUrl };
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+        [HttpGet("signup-google-response")]
+        public async Task<IActionResult> SignUpGoogleResponse()
+        {
+            var authenticateResult = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
+
+            if (!authenticateResult.Succeeded)
+                return BadRequest("Google authentication failed.");
+
+            var email = authenticateResult.Principal.FindFirst(ClaimTypes.Email)?.Value;
+            var name = authenticateResult.Principal.FindFirst(ClaimTypes.Name)?.Value;
+
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(name))
+                return BadRequest("Unable to retrieve user information.");
+
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            if (existingUser != null)
+            {
+                return BadRequest("User already exists.");
+            }
+
+            var newUser = new User
+            {
+                Username = name,
+                Email = email
+            };
+
+
+            var token = GenerateJwtToken(newUser);
+            var redirectUrl = $"http://localhost:4200/user-profile?token={token}";
+            return Redirect(redirectUrl);
+        }
+
+        //reset psw
 
         [HttpPost("request-password-reset")]
         public async Task<IActionResult> RequestPasswordReset([FromBody] PasswordResetRequestModel model)
@@ -96,7 +221,8 @@ namespace OBD.API.Controllers
 
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.Username),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.PreferredUsername, user.Username),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };

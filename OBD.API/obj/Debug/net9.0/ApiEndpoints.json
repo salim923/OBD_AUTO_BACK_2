@@ -1,0 +1,310 @@
+[
+  {
+    "ContainingType": "OBD.API.Controllers.AllCarsController",
+    "Method": "GetMakes",
+    "RelativePath": "api/AllCars/makes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AllCarsController",
+    "Method": "GetModels",
+    "RelativePath": "api/AllCars/models",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "make",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AllCarsController",
+    "Method": "GetStyles",
+    "RelativePath": "api/AllCars/styles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "make",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AllCarsController",
+    "Method": "GetYears",
+    "RelativePath": "api/AllCars/years",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.CarController",
+    "Method": "AddCarsByUserID",
+    "RelativePath": "api/Car/AddCar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "OBD.Domain.Entities.Cars",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.CarController",
+    "Method": "DeleteCar",
+    "RelativePath": "api/Car/DeleteCar/{carId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.CarController",
+    "Method": "GetCarById",
+    "RelativePath": "api/Car/GetCar/{carId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.CarController",
+    "Method": "GetCarsByUserID",
+    "RelativePath": "api/Car/GetCars",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.CarController",
+    "Method": "GetMaintenanceSuggestions",
+    "RelativePath": "api/Car/GetMaintenanceSuggestions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OBD.Domain.Entities.MaintenanceRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.CarController",
+    "Method": "UpdateCarInformation",
+    "RelativePath": "api/Car/UpdateCar/{carId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "OBD.Domain.Entities.Cars",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "GenerateJwtToken",
+    "RelativePath": "api/jwtauth/Auth",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "OBD.Domain.Entities.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "GoogleLogin",
+    "RelativePath": "api/jwtauth/Auth/google-login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "GoogleResponse",
+    "RelativePath": "api/jwtauth/Auth/google-response",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/jwtauth/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "OBD.Domain.Entities.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/jwtauth/Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/jwtauth/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "OBD.Domain.Entities.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "RequestPasswordReset",
+    "RelativePath": "api/jwtauth/Auth/request-password-reset",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "OBD.Domain.Entities.PasswordResetRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/jwtauth/Auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "OBD.Domain.Entities.PasswordResetModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "SignUpGoogleLogin",
+    "RelativePath": "api/jwtauth/Auth/signup-google",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AuthController",
+    "Method": "SignUpGoogleResponse",
+    "RelativePath": "api/jwtauth/Auth/signup-google-response",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

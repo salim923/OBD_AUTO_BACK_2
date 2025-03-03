@@ -1,16 +1,17 @@
-
-using System.Text;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using OBD.Infrastructure.Extensions;
-
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddControllers();
+
+builder.Services.AddHttpClient(); // Register HttpClient
+builder.Services.AddSingleton<GeminiService>();
 builder.Services.AddInfrastructure(builder.Configuration);
+
 
 
 builder.Services.AddEndpointsApiExplorer();
@@ -33,7 +34,6 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
     options.Cookie.SameSite = SameSiteMode.None;
-
 });
 
 builder.Services.AddCors(options =>
@@ -69,24 +69,20 @@ builder.Services.AddAuthentication(options =>
 .AddCookie()
 .AddGoogle(options =>
 {
-    options.ClientId = "ClientId";
-    options.ClientSecret = "ClientSecret";
+    options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+    options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
     options.SaveTokens = true;
     options.CallbackPath = new PathString("/signin-google");
 })
 .AddGoogle("GoogleSignUp", options =>
 {
-    options.ClientId = "ClientId";
-    options.ClientSecret = "ClientSecret";
+    options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+    options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
     options.SaveTokens = true;
     options.CallbackPath = new PathString("/signup-google");
 });
 
-
-
 var app = builder.Build();
-
-
 
 if (app.Environment.IsDevelopment())
 {
@@ -103,18 +99,16 @@ if (app.Environment.IsDevelopment())
         }
         await next();
     });
-}  
-
-
-
+}
 
 app.UseHttpsRedirection();
 
-
+app.UseRouting();
 app.UseCors("AllowSpecificOrigins");
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+

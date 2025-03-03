@@ -1,4 +1,4 @@
-@OBD.API_HostAddress = http://localhost:5134
+@OBD.API_HostAddress = http://localhost:7202
 
 GET {{OBD.API_HostAddress}}/weatherforecast/
 Accept: application/json
