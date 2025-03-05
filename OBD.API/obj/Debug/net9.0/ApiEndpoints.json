@@ -1,5 +1,63 @@
 [
   {
+    "ContainingType": "OBD.API.Controllers.AdminAuthController",
+    "Method": "GenerateJwtToken",
+    "RelativePath": "api/AdminAuth/GenerateJwtToken",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "admin",
+        "Type": "OBD.Domain.Entities.Admin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AdminAuthController",
+    "Method": "Login",
+    "RelativePath": "api/AdminAuth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "OBD.Domain.Entities.LoginModelAdmin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.AdminAuthController",
+    "Method": "Register",
+    "RelativePath": "api/AdminAuth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "OBD.Domain.Entities.RegisterModelAdmin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OBD.API.Controllers.AllCarsController",
     "Method": "GetMakes",
     "RelativePath": "api/AllCars/makes",
@@ -301,6 +359,32 @@
     "ContainingType": "OBD.API.Controllers.AuthController",
     "Method": "SignUpGoogleResponse",
     "RelativePath": "api/jwtauth/Auth/signup-google-response",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProfileController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/Profile/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userUpdate",
+        "Type": "OBD.Domain.Entities.UserUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProfileController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Profile/user-info",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

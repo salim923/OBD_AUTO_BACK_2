@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\OBD.Domain.csproj": {}
+    "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\OBD.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\OBD.Domain.csproj": {
+    "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\OBD.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\OBD.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\OBD.Domain.csproj",
         "projectName": "OBD.Domain",
-        "projectPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\OBD.Domain.csproj",
+        "projectPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\OBD.Domain.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\obj\\",
+        "outputPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\OBD.API.csproj": {}
+    "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.API\\OBD.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\OBD.API.csproj": {
+    "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.API\\OBD.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\OBD.API.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.API\\OBD.API.csproj",
         "projectName": "OBD.API",
-        "projectPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\OBD.API.csproj",
+        "projectPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.API\\OBD.API.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.API\\obj\\",
+        "outputPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\asus\\Desktop\\OBD\\OBD.Application\\OBD.Application.csproj": {
-                "projectPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Application\\OBD.Application.csproj"
+              "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Application\\OBD.Application.csproj": {
+                "projectPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Application\\OBD.Application.csproj"
               },
-              "C:\\Users\\asus\\Desktop\\OBD\\OBD.Infrastructure\\OBD.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Infrastructure\\OBD.Infrastructure.csproj"
+              "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\Obd.Infrastructure\\Obd.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\Obd.Infrastructure\\Obd.Infrastructure.csproj"
               }
             }
           }
@@ -61,10 +61,6 @@
               "target": "Package",
               "version": "[4.0.3, )"
             },
-            "Microsoft.AspNetCore.Authentication": {
-              "target": "Package",
-              "version": "[2.3.0, )"
-            },
             "Microsoft.AspNetCore.Authentication.Google": {
               "target": "Package",
               "version": "[9.0.2, )"
@@ -73,21 +69,23 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
-            "Microsoft.AspNetCore.Authentication.OAuth": {
+            "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.3.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.2, )"
             },
-            "Microsoft.AspNetCore.Identity.UI": {
+            "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.2, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.2, )"
             },
@@ -97,37 +95,25 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "Microsoft.Extensions.Identity.Core": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.2, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Portable.BouncyCastle": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[7.3.0, )"
+              "version": "[7.2.0, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
-              "version": "[7.3.0, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerGen": {
-              "target": "Package",
-              "version": "[7.3.0, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerUI": {
-              "target": "Package",
-              "version": "[7.3.0, )"
-            },
-            "System.Net.Http.Json": {
-              "target": "Package",
-              "version": "[9.0.2, )"
-            },
-            "System.Security.Claims": {
-              "target": "Package",
-              "version": "[4.3.0, )"
+              "version": "[7.2.0, )"
             }
           },
           "imports": [
@@ -153,14 +139,14 @@
         }
       }
     },
-    "C:\\Users\\asus\\Desktop\\OBD\\OBD.Application\\OBD.Application.csproj": {
+    "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Application\\OBD.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Application\\OBD.Application.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Application\\OBD.Application.csproj",
         "projectName": "OBD.Application",
-        "projectPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Application\\OBD.Application.csproj",
+        "projectPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Application\\OBD.Application.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Application\\obj\\",
+        "outputPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -181,8 +167,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\OBD.Domain.csproj": {
-                "projectPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\OBD.Domain.csproj"
+              "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\OBD.Domain.csproj": {
+                "projectPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\OBD.Domain.csproj"
               }
             }
           }
@@ -222,14 +208,14 @@
         }
       }
     },
-    "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\OBD.Domain.csproj": {
+    "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\OBD.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\OBD.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\OBD.Domain.csproj",
         "projectName": "OBD.Domain",
-        "projectPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\OBD.Domain.csproj",
+        "projectPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\OBD.Domain.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Domain\\obj\\",
+        "outputPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -267,6 +253,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -287,14 +279,14 @@
         }
       }
     },
-    "C:\\Users\\asus\\Desktop\\OBD\\OBD.Infrastructure\\OBD.Infrastructure.csproj": {
+    "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Infrastructure\\OBD.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Infrastructure\\OBD.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Infrastructure\\OBD.Infrastructure.csproj",
         "projectName": "OBD.Infrastructure",
-        "projectPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Infrastructure\\OBD.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Infrastructure\\OBD.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -315,8 +307,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\asus\\Desktop\\OBD\\OBD.Application\\OBD.Application.csproj": {
-                "projectPath": "C:\\Users\\asus\\Desktop\\OBD\\OBD.Application\\OBD.Application.csproj"
+              "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Application\\OBD.Application.csproj": {
+                "projectPath": "C:\\Users\\asus\\Desktop\\OBD_AUTO_BACK_2\\OBD.Application\\OBD.Application.csproj"
               }
             }
           }
@@ -337,6 +329,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

@@ -11,11 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("OBD.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2f850b5b7f71336eebc34fe7012fc7c27f02991")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2c779c2d44cdc83bbf81ad35cb7bb79398d2591")]
 [assembly: System.Reflection.AssemblyProductAttribute("OBD.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OBD.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
