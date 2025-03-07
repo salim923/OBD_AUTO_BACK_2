@@ -1,4 +1,4 @@
-﻿
+﻿using Microsoft.AspNetCore.Identity;
 namespace OBD.Domain.Entities
 {
     public class Cars
@@ -15,6 +15,21 @@ namespace OBD.Domain.Entities
         public float Millage { get; set; }
 
 
+    }
+    public class getCar
+    {
+        public string Year { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public List<string> Body_Style { get; set; }
+        public float Millage { get; set; }
+    }
+
+
+    public class CarUpdate
+    {
+      
+        public float Millage { get; set; }
     }
 
     public class MaintenanceRequest

@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using OBD.Domain.Entities;
 using OBD.Infrastructure.Extensions;
+using OBD.Infrastructure.Persistence;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +12,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddHttpClient();
+
+builder.Services.AddIdentity<getUser, IdentityRole>()
+    .AddEntityFrameworkStores<ObdDbContext>()
+    .AddDefaultTokenProviders();
+
+
+
 builder.Services.AddSingleton<GeminiService>();
 builder.Services.AddInfrastructure(builder.Configuration);
 

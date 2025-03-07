@@ -12,8 +12,8 @@ using OBD.Infrastructure.Persistence;
 namespace OBD.Infrastructure.Migrations
 {
     [DbContext(typeof(ObdDbContext))]
-    [Migration("20250307104626_init1")]
-    partial class init1
+    [Migration("20250307113525_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

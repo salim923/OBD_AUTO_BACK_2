@@ -219,7 +219,7 @@
       },
       {
         "Name": "model",
-        "Type": "OBD.Domain.Entities.Cars",
+        "Type": "OBD.Domain.Entities.CarUpdate",
         "IsRequired": true
       }
     ],
@@ -521,7 +521,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "OBD.API.Controllers.ProfileController",
+    "ContainingType": "ProfileController",
     "Method": "UpdateUser",
     "RelativePath": "api/Profile/update",
     "HttpMethod": "PUT",
@@ -530,14 +530,14 @@
     "Parameters": [
       {
         "Name": "userUpdate",
-        "Type": "OBD.Domain.Entities.User",
+        "Type": "OBD.Domain.Entities.UserUpdate",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "OBD.API.Controllers.ProfileController",
+    "ContainingType": "ProfileController",
     "Method": "GetProfile",
     "RelativePath": "api/Profile/user-info",
     "HttpMethod": "GET",

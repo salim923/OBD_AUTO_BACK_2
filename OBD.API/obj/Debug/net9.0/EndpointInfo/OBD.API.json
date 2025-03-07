@@ -533,17 +533,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Cars"
+                "$ref": "#/components/schemas/CarUpdate"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Cars"
+                "$ref": "#/components/schemas/CarUpdate"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Cars"
+                "$ref": "#/components/schemas/CarUpdate"
               }
             }
           }
@@ -878,17 +878,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserUpdate"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserUpdate"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserUpdate"
               }
             }
           }
@@ -921,6 +921,16 @@
           "email": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarUpdate": {
+        "type": "object",
+        "properties": {
+          "millage": {
+            "type": "number",
+            "format": "float"
           }
         },
         "additionalProperties": false
@@ -1301,6 +1311,48 @@
           "premiumExpiration": {
             "type": "string",
             "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserUpdate": {
+        "required": [
+          "address",
+          "cin",
+          "country",
+          "gender",
+          "phone",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "cin": {
+            "type": "string",
             "nullable": true
           }
         },

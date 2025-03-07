@@ -5,7 +5,7 @@
 namespace OBD.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class init1 : Migration
+    public partial class int1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

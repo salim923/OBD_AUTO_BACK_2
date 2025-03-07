@@ -101,7 +101,7 @@ namespace OBD.API.Controllers
 
         [HttpPut]
         [Route("UpdateCar/{carId}")]
-        public async Task<IActionResult> UpdateCarInformation(int carId, [FromBody] Cars model)
+        public async Task<IActionResult> UpdateCarInformation(int carId, [FromBody] CarUpdate model)
         {
             var userId = GetUserIdFromToken();
             if (userId == null)
@@ -117,13 +117,10 @@ namespace OBD.API.Controllers
             {
                 return Unauthorized("You do not have permission to update this car.");
             }
-            car.Year = model.Year;
-            car.Make = model.Make;
-            car.Model = model.Model;
-            car.Body_Style = model.Body_Style;
+
             car.Millage = model.Millage;
             await _context.SaveChangesAsync();
-            return Ok(car);
+            return NoContent();
         }
 
         [HttpDelete]
@@ -165,10 +162,10 @@ namespace OBD.API.Controllers
                 return NotFound("User not found.");
             }
 
-           /* if (!user.IsPremium)
-            {
-                return Forbid("Access denied. Premium subscription required.");
-            }*/
+            /* if (!user.IsPremium)
+             {
+                 return Forbid("Access denied. Premium subscription required.");
+             }*/
 
             var result = await _geminiService.GenerateMaintenanceSchedule(request.Year, request.Make, request.Model, request.Millage);
             var suggestions = result.Split('\n').Where(item => !string.IsNullOrWhiteSpace(item)).ToList();
