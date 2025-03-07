@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-
+﻿
 namespace OBD.Domain.Entities
 
 {
@@ -15,17 +14,12 @@ namespace OBD.Domain.Entities
         public string Gender { get; set; } = string.Empty;
         public string Country { get; set; } = string.Empty;
         public string Address { get; set; } = string.Empty;
+   
+        public bool IsPremium { get; set; }
+        public DateTime? PremiumExpiration { get; set; }
+
     }
-    public class getUser : IdentityUser
-    {
-        public string Username { get; set; } = string.Empty;
-        public string Phone { get; set; } = string.Empty;
-        public string CIN { get; set; } = string.Empty;
-        public DateTime DateOfBirth { get; set; }
-        public string Gender { get; set; } = string.Empty;
-        public string Country { get; set; } = string.Empty;
-        public string Address { get; set; } = string.Empty;
-    }
+
 
     public class RegisterModel
     {
@@ -44,15 +38,6 @@ namespace OBD.Domain.Entities
         public required string Email { get; set; }
         public required string Password { get; set; }
     }
-    public class UserUpdate
-    {
-        public required string Username { get; set; }
-        public required string Phone { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public required string Gender { get; set; }
-        public required string Country { get; set; }
-        public required string Address { get; set; }
-        public required string CIN { get; set; }
-    }
+
 
 }

@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OBD.Domain.Entities;
 using OBD.Infrastructure.Persistence;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace OBD.API.Controllers
 {
@@ -153,12 +153,26 @@ namespace OBD.API.Controllers
         [Route("GetMaintenanceSuggestions")]
         public async Task<IActionResult> GetMaintenanceSuggestions([FromBody] MaintenanceRequest request)
         {
+            var userId = GetUserIdFromToken();
+            if (userId == null)
+            {
+                return Unauthorized("User ID not found in token.");
+            }
+
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+           /* if (!user.IsPremium)
+            {
+                return Forbid("Access denied. Premium subscription required.");
+            }*/
+
             var result = await _geminiService.GenerateMaintenanceSchedule(request.Year, request.Make, request.Model, request.Millage);
             var suggestions = result.Split('\n').Where(item => !string.IsNullOrWhiteSpace(item)).ToList();
             return Ok(new { suggestions });
         }
-
-
-       
     }
 }

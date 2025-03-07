@@ -228,8 +228,8 @@
   {
     "ContainingType": "OBD.API.Controllers.AuthController",
     "Method": "GenerateJwtToken",
-    "RelativePath": "api/jwtauth/Auth",
-    "HttpMethod": "",
+    "RelativePath": "api/jwtauth/Auth/GenerateJwtToken",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -366,7 +366,53 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProfileController",
+    "ContainingType": "OBD.API.Controllers.PremiumController",
+    "Method": "CancelUpgrade",
+    "RelativePath": "api/Premium/cancel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.PremiumController",
+    "Method": "GetPremiumStatus",
+    "RelativePath": "api/Premium/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.PremiumController",
+    "Method": "UpgradeToPremium",
+    "RelativePath": "api/Premium/upgrade",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.PremiumController",
+    "Method": "UpgradeSuccess",
+    "RelativePath": "api/Premium/upgrade/success",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "session_id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.ProfileController",
     "Method": "UpdateUser",
     "RelativePath": "api/Profile/update",
     "HttpMethod": "PUT",
@@ -375,14 +421,14 @@
     "Parameters": [
       {
         "Name": "userUpdate",
-        "Type": "OBD.Domain.Entities.UserUpdate",
+        "Type": "OBD.Domain.Entities.User",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ProfileController",
+    "ContainingType": "OBD.API.Controllers.ProfileController",
     "Method": "GetProfile",
     "RelativePath": "api/Profile/user-info",
     "HttpMethod": "GET",

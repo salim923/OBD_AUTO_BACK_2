@@ -69,19 +69,11 @@
               "target": "Package",
               "version": "[9.0.2, )"
             },
-            "Microsoft.AspNetCore.Identity": {
-              "target": "Package",
-              "version": "[2.3.0, )"
-            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.2, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[9.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.2, )"
             },
@@ -106,6 +98,10 @@
             "Portable.BouncyCastle": {
               "target": "Package",
               "version": "[1.9.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[47.4.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -257,6 +253,14 @@
             "Microsoft.AspNet.Identity.EntityFramework": {
               "target": "Package",
               "version": "[2.2.4, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[9.0.2, )"
             }
           },
           "imports": [
@@ -329,14 +333,6 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Identity": {
-              "target": "Package",
-              "version": "[2.3.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[9.0.2, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

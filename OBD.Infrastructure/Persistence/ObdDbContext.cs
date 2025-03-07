@@ -11,8 +11,8 @@ namespace OBD.Infrastructure.Persistence
         }
 
         internal DbSet<User> Users { get; set; }
+        internal DbSet<Admin> Admins { get; set; }
         internal DbSet<Cars> Cars { get; set; }
         internal DbSet<AllCars> OBD2 { get; set; }
-        internal DbSet<Admin> Admins { get; set; }
     }
 }

@@ -8,11 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddHttpClient(); // Register HttpClient
+builder.Services.AddHttpClient();
 builder.Services.AddSingleton<GeminiService>();
 builder.Services.AddInfrastructure(builder.Configuration);
-
-
 
 builder.Services.AddEndpointsApiExplorer();
 
@@ -111,4 +109,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-

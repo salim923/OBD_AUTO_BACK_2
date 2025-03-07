@@ -10,6 +10,10 @@ C:\Users\asus\Desktop\OBD\OBD.Domain\obj\Debug\net9.0\refint\OBD.Domain.dll
 C:\Users\asus\Desktop\OBD\OBD.Domain\obj\Debug\net9.0\OBD.Domain.pdb
 C:\Users\asus\Desktop\OBD\OBD.Domain\obj\Debug\net9.0\ref\OBD.Domain.dll
 C:\Users\asus\Desktop\OBD\OBD.Domain\obj\Debug\net9.0\OBD.Domain.sourcelink.json
+C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\bin\Debug\net9.0\OBD.Domain.deps.json
+C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\bin\Debug\net9.0\OBD.Domain.dll
+C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\bin\Debug\net9.0\OBD.Domain.pdb
+C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\OBD.Domain.csproj.AssemblyReference.cache
 C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\OBD.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\OBD.Domain.AssemblyInfoInputs.cache
 C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\OBD.Domain.AssemblyInfo.cs
@@ -18,8 +22,4 @@ C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\OBD.Domain.sou
 C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\OBD.Domain.dll
 C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\refint\OBD.Domain.dll
 C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\OBD.Domain.pdb
-C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\OBD.Domain.csproj.AssemblyReference.cache
-C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\bin\Debug\net9.0\OBD.Domain.deps.json
-C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\bin\Debug\net9.0\OBD.Domain.dll
-C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\bin\Debug\net9.0\OBD.Domain.pdb
 C:\Users\asus\Desktop\OBD_AUTO_BACK_2\OBD.Domain\obj\Debug\net9.0\ref\OBD.Domain.dll
