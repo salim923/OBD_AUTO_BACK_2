@@ -16,7 +16,17 @@ namespace OBD.Domain.Entities
 
 
     }
-    public class getCar
+    public class CarDto
+    {
+        public int Id { get; set; }
+        public string Year { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public List<string> Body_Style { get; set; }
+        public float Millage { get; set; }
+    }
+
+    public class CarInsertDto
     {
         public string Year { get; set; }
         public string Make { get; set; }
@@ -24,6 +34,7 @@ namespace OBD.Domain.Entities
         public List<string> Body_Style { get; set; }
         public float Millage { get; set; }
     }
+
 
 
     public class CarUpdate

@@ -140,7 +140,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "OBD.Domain.Entities.Cars",
+        "Type": "OBD.Domain.Entities.CarInsertDto",
         "IsRequired": true
       }
     ],

@@ -491,17 +491,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Cars"
+                "$ref": "#/components/schemas/CarInsertDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Cars"
+                "$ref": "#/components/schemas/CarInsertDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Cars"
+                "$ref": "#/components/schemas/CarInsertDto"
               }
             }
           }
@@ -925,23 +925,9 @@
         },
         "additionalProperties": false
       },
-      "CarUpdate": {
+      "CarInsertDto": {
         "type": "object",
         "properties": {
-          "millage": {
-            "type": "number",
-            "format": "float"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Cars": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "year": {
             "type": "string",
             "nullable": true
@@ -961,13 +947,16 @@
             },
             "nullable": true
           },
-          "userId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
+          "millage": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarUpdate": {
+        "type": "object",
+        "properties": {
           "millage": {
             "type": "number",
             "format": "float"

@@ -41,7 +41,18 @@ namespace OBD.API.Controllers
             {
                 return Unauthorized("User ID not found in token.");
             }
-            var cars = await _context.Cars.Where(c => c.User.Id == userId).ToListAsync();
+            var cars = await _context.Cars
+                .Where(c => c.User.Id == userId)
+                .Select(c => new CarDto
+                {
+                    Id = c.Id,
+                    Year = c.Year,
+                    Make = c.Make,
+                    Model = c.Model,
+                    Body_Style = c.Body_Style,
+                    Millage = c.Millage
+                })
+                .ToListAsync();
             return Ok(cars);
         }
 
@@ -65,12 +76,23 @@ namespace OBD.API.Controllers
                 return Unauthorized("You do not have permission to view this car.");
             }
 
-            return Ok(car);
+            var carDto = new CarDto
+            {
+                Id = car.Id,
+                Year = car.Year,
+                Make = car.Make,
+                Model = car.Model,
+                Body_Style = car.Body_Style,
+                Millage = car.Millage
+            };
+
+            return Ok(carDto);
         }
+
 
         [HttpPost]
         [Route("AddCar")]
-        public async Task<IActionResult> AddCarsByUserID([FromBody] Cars model)
+        public async Task<IActionResult> AddCarsByUserID([FromBody] CarInsertDto model)
         {
             var userId = GetUserIdFromToken();
             if (userId == null)
