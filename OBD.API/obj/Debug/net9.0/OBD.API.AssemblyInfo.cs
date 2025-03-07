@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OBD.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cde9f5f0c7ebe76dc2a5531d5b65349cf4f046f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee79512bc822c6bfac7e64f3766b713a90b171dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("OBD.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OBD.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

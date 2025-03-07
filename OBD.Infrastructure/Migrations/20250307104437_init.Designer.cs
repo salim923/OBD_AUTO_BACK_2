@@ -12,8 +12,8 @@ using OBD.Infrastructure.Persistence;
 namespace OBD.Infrastructure.Migrations
 {
     [DbContext(typeof(ObdDbContext))]
-    [Migration("20250305151959_init0")]
-    partial class init0
+    [Migration("20250307104437_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -115,6 +115,58 @@ namespace OBD.Infrastructure.Migrations
                     b.ToTable("Cars");
                 });
 
+            modelBuilder.Entity("OBD.Domain.Entities.Garage", b =>
+                {
+                    b.Property<int>("GarageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GarageId"));
+
+                    b.Property<string>("Contact")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("GarageId");
+
+                    b.ToTable("Garages");
+                });
+
+            modelBuilder.Entity("OBD.Domain.Entities.OpeningHour", b =>
+                {
+                    b.Property<int>("IdOpeningHour")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdOpeningHour"));
+
+                    b.Property<string>("ClosingTime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Day")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GarageId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OpeningTime")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdOpeningHour");
+
+                    b.HasIndex("GarageId");
+
+                    b.ToTable("OpeningHours");
+                });
+
             modelBuilder.Entity("OBD.Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")
@@ -177,6 +229,20 @@ namespace OBD.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("OBD.Domain.Entities.OpeningHour", b =>
+                {
+                    b.HasOne("OBD.Domain.Entities.Garage", null)
+                        .WithMany("OpeningHours")
+                        .HasForeignKey("GarageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("OBD.Domain.Entities.Garage", b =>
+                {
+                    b.Navigation("OpeningHours");
                 });
 #pragma warning restore 612, 618
         }
