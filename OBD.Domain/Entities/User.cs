@@ -17,6 +17,8 @@ namespace OBD.Domain.Entities
         public string Address { get; set; } = string.Empty;
         public bool IsPremium { get; set; }
         public DateTime? PremiumExpiration { get; set; }
+
+        public ICollection<MessageRecipient> MessageRecipients { get; set; } = new List<MessageRecipient>();
     }
     public class getUser : IdentityUser
     {

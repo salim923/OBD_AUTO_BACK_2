@@ -91,7 +91,7 @@ namespace OBD.API.Controllers
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, admin.Id.ToString()),
-                new Claim(JwtRegisteredClaimNames.PreferredUsername, admin.Username),
+                new Claim(JwtRegisteredClaimNames.Name, admin.Username),
                 new Claim(JwtRegisteredClaimNames.Email, admin.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };

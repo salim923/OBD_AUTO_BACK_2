@@ -167,6 +167,7 @@ namespace OBD.API.Controllers
 
 
             var token = GenerateJwtToken(newUser);
+            
             var redirectUrl = $"http://localhost:4200/user-profile?token={token}";
             return Redirect(redirectUrl);
         }
@@ -222,7 +223,7 @@ namespace OBD.API.Controllers
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-                new Claim(JwtRegisteredClaimNames.PreferredUsername, user.Username),
+                new Claim(JwtRegisteredClaimNames.Name, user.Username),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };

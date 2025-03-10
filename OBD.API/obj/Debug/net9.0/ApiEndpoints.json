@@ -475,6 +475,74 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "OBD.API.Controllers.MessageController",
+    "Method": "DeleteMessage",
+    "RelativePath": "api/Message/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.MessageController",
+    "Method": "GetMessageCount",
+    "RelativePath": "api/Message/count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.MessageController",
+    "Method": "GetRecentMessages",
+    "RelativePath": "api/Message/recent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.MessageController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Message/send",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "messageInsert",
+        "Type": "OBD.Domain.Entities.MessageInsert",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OBD.API.Controllers.MessageController",
+    "Method": "SendToAll",
+    "RelativePath": "api/Message/send/all",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "messageInsert",
+        "Type": "OBD.Domain.Entities.MessageInsert",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OBD.API.Controllers.PremiumController",
     "Method": "CancelUpgrade",
     "RelativePath": "api/Premium/cancel",

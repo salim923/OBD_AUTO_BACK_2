@@ -12,8 +12,8 @@ using OBD.Infrastructure.Persistence;
 namespace OBD.Infrastructure.Migrations
 {
     [DbContext(typeof(ObdDbContext))]
-    [Migration("20250307120119_int1")]
-    partial class int1
+    [Migration("20250310100922_a7")]
+    partial class a7
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,6 +51,29 @@ namespace OBD.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("OBD2");
+                });
+
+            modelBuilder.Entity("MessageRecipient", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("MessageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MessageId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("MessageRecipients");
                 });
 
             modelBuilder.Entity("OBD.Domain.Entities.Admin", b =>
@@ -140,6 +163,38 @@ namespace OBD.Infrastructure.Migrations
                     b.ToTable("Garages");
                 });
 
+            modelBuilder.Entity("OBD.Domain.Entities.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateSent")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("OBD.Domain.Entities.OpeningHour", b =>
                 {
                     b.Property<int>("IdOpeningHour")
@@ -220,6 +275,21 @@ namespace OBD.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("MessageRecipient", b =>
+                {
+                    b.HasOne("OBD.Domain.Entities.Message", null)
+                        .WithMany("MessageRecipients")
+                        .HasForeignKey("MessageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OBD.Domain.Entities.User", null)
+                        .WithMany("MessageRecipients")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("OBD.Domain.Entities.Cars", b =>
                 {
                     b.HasOne("OBD.Domain.Entities.User", "User")
@@ -243,6 +313,16 @@ namespace OBD.Infrastructure.Migrations
             modelBuilder.Entity("OBD.Domain.Entities.Garage", b =>
                 {
                     b.Navigation("OpeningHours");
+                });
+
+            modelBuilder.Entity("OBD.Domain.Entities.Message", b =>
+                {
+                    b.Navigation("MessageRecipients");
+                });
+
+            modelBuilder.Entity("OBD.Domain.Entities.User", b =>
+                {
+                    b.Navigation("MessageRecipients");
                 });
 #pragma warning restore 612, 618
         }
